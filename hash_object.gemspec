@@ -1,10 +1,16 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "hash_object/version"
+
+VERSION = begin 
+            require 'choosy/version'
+            Choosy::Version.load_from_lib
+          rescue LoadError
+            '0'
+          end
 
 Gem::Specification.new do |s|
   s.name        = "hash_object"
-  s.version     = HashObject::VERSION
+  s.version     = VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Gabe McArthur"]
   s.email       = ["madeonamac@gmail.com"]
