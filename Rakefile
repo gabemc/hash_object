@@ -4,6 +4,7 @@ $LOAD_PATH.unshift File.expand_path("../spec", __FILE__)
 require 'rubygems'
 require 'fileutils'
 require 'rspec/core/rake_task'
+require 'choosy/rake'
 
 task :default => :spec
 
